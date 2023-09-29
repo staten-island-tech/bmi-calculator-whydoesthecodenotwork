@@ -9,7 +9,7 @@ html,
 }
 
 h1 {
-	font-size: 10rem;
+	font-size: 7vh;
 	text-align: center;
 }
 
@@ -19,30 +19,32 @@ h1 {
 	justify-content: center;
 	width: 75%;
 	margin: 0 auto;
-	padding: 5%;
-	font-size: 3rem;
+	padding: 3%;
 	border: 1rem;
-	border-style: ridge;
+	border-style: outset;
 	background-color: #fefefe;
+	font-size: 3vh;
 }
 
 #input input {
-	line-height: 5rem;
+	font-size: 3vh;
+	line-height: 1;
 	padding: 1rem;
-	font-size: 5rem;
 	background-color: #eeeeee;
 	border: 0.5rem;
 	border-style: inset;
 }
 
 #input input:focus {
-	box-shadow: 0 0 1rem rgb(109, 255, 255);
+	box-shadow: 0 0 1rem #efefef;
 }
 
 #input input[type="submit"] {
+	margin: 0 auto;
+	font-size: 4vw;
 	border: 1rem;
 	border-style: outset;
-	border-color: #000000, #fefefe;
+	border-color: #fefefe;
 }
 
 #results {
@@ -50,11 +52,15 @@ h1 {
 	flex-direction: column;
 	width: 75%;
 	margin: 1rem auto;
+	padding:1rem;
 	border: 1rem;
 	border-style: outset;
-	border-color: #000000, #fefefe;
+	border-color: #fefefe;
 	text-align: center;
 	row-gap: 1rem;
+	animation-name: "appear";
+	animation-duration: 15.5s;
+	animation-timing-function: ease-in;
 }
 
 #bmi {
@@ -64,3 +70,16 @@ h1 {
 #class {
 	font-size: 3rem;
 }
+
+b {
+	font-size: inherit;
+}
+
+@keyframes appear {
+	from {
+		opacity: 0%;
+	}
+	to {
+		opacity: 100%;
+	}
+  }
