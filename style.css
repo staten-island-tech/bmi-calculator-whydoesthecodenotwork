@@ -41,10 +41,14 @@ h1 {
 
 #input input[type="submit"] {
 	margin: 0 auto;
-	font-size: 4vw;
+	font-size: 3vw;
 	border: 1rem;
 	border-style: outset;
 	border-color: #fefefe;
+}
+
+#input input[type="submit"]:active {
+	border-style: inset;
 }
 
 #results {
@@ -58,9 +62,48 @@ h1 {
 	border-color: #fefefe;
 	text-align: center;
 	row-gap: 1rem;
-	animation-name: "appear";
-	animation-duration: 15.5s;
-	animation-timing-function: ease-in;
+	visibility: hidden;
+
+	opacity: 0;
+	transition-property: opacity;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in;
+}
+
+#results.show {
+	opacity: 1;
+	visibility: visible;
+}
+
+#results meter::-webkit-meter-optimum-value {
+	background: rgb(111, 111, 111);
+  }
+#results meter::-moz-meter-bar { /* Firefox Pseudo Class */
+	background: rgb(111, 111, 111);
+}
+
+#results meter.isnotgood::-webkit-meter-optimum-value {
+	background: rgb(255, 55, 55);
+}
+#results meter.isnotgood::-moz-meter-bar { /* Firefox Pseudo Class */
+	background: rgb(255, 55, 55);
+}
+
+#bar {
+	display: block;
+	align-items: center;
+	gap: 2%;
+}
+
+#bar #classbar {
+	width: 100%;
+	margin: 0 auto;
+	height: 2rem;
+}
+
+#bardescriptor {
+	display: flex;
+	justify-content: space-between;
 }
 
 #bmi {
@@ -74,12 +117,3 @@ h1 {
 b {
 	font-size: inherit;
 }
-
-@keyframes appear {
-	from {
-		opacity: 0%;
-	}
-	to {
-		opacity: 100%;
-	}
-  }

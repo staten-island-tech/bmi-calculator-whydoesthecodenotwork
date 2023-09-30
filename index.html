@@ -11,14 +11,21 @@
       what is your name:
       <input type="text" name="name" required /><br />
       what is your height in cm:
-      <input type="number" name="height" required /><br />
+      <input type="number" name="height" step="any" required /><br />
       what is your weight in kg:
-      <input type="number" name="weight" required /><br />
+      <input type="number" name="weight" step="any" required /><br />
       <input type="submit" value="diagnose me" />
     </form>
     <div id="results">
       <p id="bmi"></p>
       <p id="class"></p>
+      <div id="bar">
+        <meter id="classbar" min="0" max="100" value="0"></meter>
+        <div id="bardescriptor">
+          <p id="low">lower end<br />yeah</p>
+          <p id="high">higher end<br />yeah</p>
+        </div>
+      </div>
     </div>
   </body>
   <script src="app.js"></script>
