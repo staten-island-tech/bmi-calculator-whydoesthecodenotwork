@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,12 +9,30 @@
   <body>
     <h1>bmi calculator</h1>
     <form id="input" onsubmit="go();return false">
-      what is your name:
-      <input type="text" name="name" required /><br />
-      what is your height in cm:
-      <input type="number" name="height" step="any" required /><br />
-      what is your weight in kg:
-      <input type="number" name="weight" step="any" required /><br />
+      <label
+        >what is your name:<br /><input
+          type="text"
+          name="name"
+          autocomplete="off"
+          required
+      /></label>
+      <label
+        >what is your height in cm:<br />
+        <input
+          type="number"
+          name="height"
+          step="any"
+          autocomplete="off"
+          required
+      /></label>
+      <label
+        >what is your weight in kg:<br /><input
+          type="number"
+          name="weight"
+          step="any"
+          autocomplete="off"
+          required
+      /></label>
       <input type="submit" value="diagnose me" />
     </form>
     <div id="results">
