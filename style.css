@@ -9,7 +9,7 @@ html,
 }
 
 h1 {
-	font-size: 7vh;
+	font-size: 6rem;
 	text-align: center;
 }
 
@@ -23,11 +23,11 @@ h1 {
 	border: 1rem;
 	border-style: outset;
 	background-color: #fefefe;
-	font-size: 3vh;
+	font-size: 3.5rem;
 }
 
 #input input {
-	font-size: 3vh;
+	font-size: 3rem;
 	line-height: 1;
 	padding: 1rem;
 	background-color: #eeeeee;
@@ -41,7 +41,7 @@ h1 {
 
 #input input[type="submit"] {
 	margin: 0 auto;
-	font-size: 3vw;
+	font-size: 3rem;
 	border: 1rem;
 	border-style: outset;
 	border-color: #fefefe;
@@ -104,6 +104,18 @@ h1 {
 #bardescriptor {
 	display: flex;
 	justify-content: space-between;
+}
+
+#bardescriptor * {
+	font-size: 1.5rem;
+}
+
+#bardescriptor #low {
+	text-align: left;
+}
+
+#bardescriptor #high {
+	text-align: right;
 }
 
 #bmi {
